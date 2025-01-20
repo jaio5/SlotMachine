@@ -1,31 +1,39 @@
+let imagenes = ["Slot.jpg", "campana.jpg", "cereza.jpeg", "diamond.png"];
 
-let imagenes = ["Slot.jpg", "cereza.jpeg", "diamond.png", "campana.jpg"];
+let tiempoSlot1 = 100;
+let tiempoSlot2 = 100;
+let tiempoSlot3 = 100;
+let manejaSlot1, manejaSlot2, manejaSlot3;
+let slotsEnMovimiento = false;
 
-let tiempoSlot1=100;
-let manejaSlot1;
-
-
-function cambiarImagen() {
-    let aleatorio = parseInt(Math.random()*imagenes.length);
+function cambiarImagen1() {
+    let aleatorio = parseInt(Math.random() * imagenes.length);
     document.getElementById("slot1").src = imagenes[aleatorio];
     console.log(aleatorio);
+}
 
+function cambiarImagen2() {
+    let aleatorio = parseInt(Math.random() * imagenes.length);
+    document.getElementById("slot2").src = imagenes[aleatorio];
+    console.log(aleatorio);
+}
+
+function cambiarImagen3() {
+    let aleatorio = parseInt(Math.random() * imagenes.length);
+    document.getElementById("slot3").src = imagenes[aleatorio];
+    console.log(aleatorio);
 }
 
 function tirada() {
-    manejaSlot1 = setInterval(cambiarImagen, tiempoSlot1);
-    setTimeout(reducirtiempo, 3000);
+
+    manejaSlot1 = setInterval(cambiarImagen1, tiempoSlot1);
+    manejaSlot2 = setInterval(cambiarImagen2, tiempoSlot2);
+    manejaSlot3 = setInterval(cambiarImagen3, tiempoSlot3);
+    setTimeout(pararSlot, 3000);
 }
 
-function reducirtiempo(){
-    tiempoSlot1 += 500;
+function pararSlot() {
     clearInterval(manejaSlot1);
-    manejaSlot1 = setInterval(cambiarImagen, tiempoSlot1);
-    setTimeout(pararSlot1, 2000);
+    clearInterval(manejaSlot2);
+    clearInterval(manejaSlot3);
 }
-function pararSlot1() {
-    clearInterval(manejaSlot1);
-}
-
-tirada();
-
