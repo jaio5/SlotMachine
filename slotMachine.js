@@ -32,7 +32,7 @@ function cambiarImagen3() {
 function tirada() {
     if (slotsEnMovimiento) return; // Evita que se vuelva a tirar si los slots están en movimiento
     if (monedas <= 0) {
-        alert("No tienes suficientes monedas para jugar.");
+       document.getElementById("mensajeVictoria").innerHTML = "No tienes monedas para jugar";
         return;
     }
     monedas--; // Resta una moneda por tirada
