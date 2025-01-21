@@ -95,8 +95,14 @@ function verificarGanador() {
 }
 function tarjetazo()
 {
-    let textareaValue = document.getElementById("tarjeta").value;
-    monedas += parseInt(textareaValue,10);
-    console.log(monedas);
-    actualizarMonedas();
+    if(document.getElementById("tarjeta").value >0)
+    {
+        let textareaValue = document.getElementById("tarjeta").value;
+        monedas += parseInt(textareaValue,10);
+        console.log(monedas);
+        actualizarMonedas();
+    }else{
+        mensaje = "has introducido un valor incorrecto";
+        document.getElementById("mensajeVictoria").innerHTML = mensaje;
+    }
 }
