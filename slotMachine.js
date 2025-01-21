@@ -88,10 +88,10 @@ function verificarGanador() {
                 mensaje += "Bote: 400 monedas";
                 break;
         }
-        monedas += premio;
+        monedas =monedas + premio;
         actualizarMonedas();
         document.getElementById("mensajeVictoria").innerHTML = mensaje;
     } else {
-        document.getElementById("mensajeVictoria").innerHTML = "";
+        document.getElementById("mensajeVictoria").innerHTML = "sueterte la proxima vez";
     }
 }
