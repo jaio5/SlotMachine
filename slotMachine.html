@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="slotMachine.css">
 </head>
 <body>
-    <div style="flex-direction: row; display: flex;">
+    <div id="div1">
         <div>
             <img id="slot1" style="height: 200px; width:200px" src="Slot.jpg" alt="slot1">
         </div>
@@ -17,11 +18,14 @@
             <img id="slot3" style="height: 200px; width:200px" src="Slot.jpg" alt="slot3">
         </div>
     </div>
-    <div id="recuentoMonedas">Monedas: 10</div>
-    <button type="button" onclick="tirada()">Girar</button>
-    <audio id="slotSound" src="Spin.mp3"></audio> 
-    <div id="mensajeVictoria"></div>
-
-    <script src="slotMachine.js"></script>
+    <div id="div2">
+        <div id="recuentoMonedas">Monedas: 10</div>
+        <button type="button" onclick="tirada()">Girar</button>
+        <audio id="slotSound" src="Spin.mp3"></audio> 
+        <input type="text" id="tarjeta" placeholder="Introduce la cantidad a invertir">
+        <button onclick="tarjetazo()">pagar</button>
+        <script src="slotMachine.js"></script>
+        <div id="mensajeVictoria"></div>
+    </div>
 </body>
 </html>
