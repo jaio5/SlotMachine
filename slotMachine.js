@@ -101,6 +101,7 @@ function tarjetazo()
         monedas += parseInt(textareaValue,10);
         console.log(monedas);
         actualizarMonedas();
+        document.getElementById("tarjeta").value=" ";
     }else{
         mensaje = "has introducido un valor incorrecto";
         document.getElementById("mensajeVictoria").innerHTML = mensaje;
