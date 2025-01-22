@@ -1,4 +1,4 @@
-let imagenes = ["Slot.jpg", "campana.jpg", "cereza.jpeg", "diamond.png"];
+let imagenes = ["Imagen1.jpg", "Imagen2.jpg", "Imagen3.jpg", "Imagen4.jpg"];
 
 let tiempoSlot1 = 100;
 let tiempoSlot2 = 100;
