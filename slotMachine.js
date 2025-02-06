@@ -28,7 +28,9 @@ function cambiarImagen3() {
     document.getElementById("slot3").src = imagenes[aleatorio];
     
 }
-
+function vaciarMensaje() {
+    document.getElementById("mensajeVictoria").innerHTML = " ";
+}
 function tirada() {
     if (slotsEnMovimiento) return; // Evita que se vuelva a tirar si los slots están en movimiento
     if (monedas <= 0) {
@@ -88,8 +90,10 @@ function verificarGanador() {
         console.log(monedas);
         mensaje += `Has ganado ${premio} monedas.`;
         document.getElementById("mensajeVictoria").innerHTML = mensaje;
+        setTimeout(vaciarMensaje, 3000);
     } else {
         document.getElementById("mensajeVictoria").innerHTML = "Suerte la próxima vez";
+        setTimeout(vaciarMensaje, 3000);
     }
     
 }
@@ -102,8 +106,10 @@ function tarjetazo()
         console.log(monedas);
         actualizarMonedas();
         document.getElementById("tarjeta").value=" ";
+        setTimeout(vaciarMensaje, 3000);
     }else{
         mensaje = "has introducido un valor incorrecto";
         document.getElementById("mensajeVictoria").innerHTML = mensaje;
+        setTimeout(vaciarMensaje, 3000);
     }
 }

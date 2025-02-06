@@ -1,32 +1,139 @@
-
-head, body,html {
+/* Reset y estilos generales */
+html, body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background: black;
-}
-#div1{
-    flex-direction: column; 
-    padding-top: 100px;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-}
-#div2{
-    flex-direction: row; 
-    display: flex;
-    align-items: center;
-
-}
-#div3{
-    flex-direction: column; 
-    display: flex;
-    align-items: left;
-
-    padding-right: 430px;
-}
-#recuentoMonedas
-{
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #4a4a72);
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Contenedor principal */
+#div1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 600px;
+}
+
+/* Contenedor de los slots */
+#div2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Slots (imágenes) */
+#div2 img {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#div2 img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.5);
+}
+
+/* Contenedor de controles */
+#div3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    text-align: center;
+}
+
+/* Texto de recuento de monedas */
+#recuentoMonedas {
+    font-size: 24px;
+    font-weight: bold;
+    color: #feca57;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Botones */
+button {
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ee0979, #ff6a00);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Input (cantidad a invertir) */
+#tarjeta {
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Mensaje de victoria */
+#mensajeVictoria {
     font-size: 20px;
+    font-weight: bold;
+    color: #1dd1a1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    #div1 {
+        width: 95%;
+    }
+
+    #div2 img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #recuentoMonedas {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    #tarjeta {
+        font-size: 14px;
+    }
 }
