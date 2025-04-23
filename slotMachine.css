@@ -1,4 +1,4 @@
-/* Reset y estilos generales */
+
 html, body {
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ html, body {
     overflow: hidden;
 }
 
-/* Contenedor principal */
+
 #div1 {
     display: flex;
     flex-direction: column;
